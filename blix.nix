@@ -48,6 +48,11 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
   };
   security.sudo.wheelNeedsPassword = false;
 
+  services.xserver.enable = true;
+  services.xserver.desktopManager.mate.enable = true;
+  services.xserver.displayManager.autoLogin.enable = true;
+  services.xserver.displayManager.autoLogin.user = "u";
+
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     wget vim tmux gnupg ncdu mosh
@@ -61,7 +66,7 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
     gnirehtet # reverse android tethering
 
     # research
-    theharvester
+    theharvester tor
 
     # disk analysis
     testdisk squashfs-tools-ng ddrescue volatility
