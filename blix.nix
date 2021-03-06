@@ -72,11 +72,11 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
     # disk analysis
     testdisk squashfs-tools-ng ddrescue volatility
     stegseek apktool adbfs-rootless ursadb android-udev-rules
-    valgrind dos2unix cherrytree
+    valgrind dos2unix
 
     # exploit
     doona metasploit twa wifite2 burpsuite wpscan wfuzz
-    sqlmap thc-hydra (callPackage ./routersploit.nix { })
+    sqlmap thc-hydra (callPackage ./pkgs/routersploit.nix { })
     #dsniff 
 
     # crack
@@ -88,6 +88,9 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
 
     # development
     arduino python3Packages.pip ino
+
+    # disclosure
+    cherrytree (callPackage ./pkgs/catgirl.nix { })
   ];
 
   environment.variables.GC_INITIAL_HEAP_SIZE = "1M";
