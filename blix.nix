@@ -57,14 +57,16 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
     # network analysis
     nmap masscan termshark netsniff-ng argus bettercap
     stress-ng multimon-ng aircrack-ng mfcuk pixiewps
-    hcxtools dirb sslyze sslsplit whsniff sniffglue
+    hcxtools dirb sslsplit whsniff sniffglue pwnat
+    gnirehtet # reverse android tethering
 
     # research
     theharvester
 
     # disk analysis
     testdisk squashfs-tools-ng ddrescue volatility
-    stegseek
+    stegseek apktool adbfs-rootless ursadb android-udev-rules
+    valgrind dos2unix cherrytree
 
     # exploit
     doona metasploit twa wifite2 burpsuite wpscan wfuzz
@@ -77,6 +79,9 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
 
     # security scan
     lynis chkrootkit
+
+    # development
+    arduino python3Packages.pip ino
   ];
 
   environment.variables.GC_INITIAL_HEAP_SIZE = "1M";
