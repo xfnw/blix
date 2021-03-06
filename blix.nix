@@ -3,7 +3,6 @@
 {config, pkgs, lib, ...}:
 
 with lib;
-
 {
   imports = [
     <nixpkgs/nixos/modules/installer/cd-dvd/iso-image.nix>
@@ -49,9 +48,11 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
   security.sudo.wheelNeedsPassword = false;
 
   services.xserver.enable = true;
-  services.xserver.desktopManager.mate.enable = true;
+  services.xserver.desktopManager.xfce.enable = true;
   services.xserver.displayManager.autoLogin.enable = true;
   services.xserver.displayManager.autoLogin.user = "u";
+
+
 
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
@@ -60,7 +61,7 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
     w3m lynx elinks
 
     # network analysis
-    nmap masscan termshark netsniff-ng argus bettercap
+    nmap masscan wireshark termshark netsniff-ng argus bettercap
     stress-ng multimon-ng aircrack-ng mfcuk pixiewps
     hcxtools dirb sslsplit whsniff sniffglue pwnat
     gnirehtet # reverse android tethering
@@ -75,8 +76,8 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
 
     # exploit
     doona metasploit twa wifite2 burpsuite wpscan wfuzz
-    sqlmap thc-hydra
-    #dsniff routersploit
+    sqlmap thc-hydra (callPackage ./routersploit.nix { })
+    #dsniff 
 
     # crack
     hashcat mfoc pyrit john
