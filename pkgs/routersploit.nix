@@ -1,4 +1,4 @@
-{lib, stdenv, pkgs, fetchFromGitHub }:
+{lib, stdenv, pkgs, fetchFromGitHub}:
 
 stdenv.mkDerivation rec {
   pname = "routersploit";
@@ -11,9 +11,19 @@ stdenv.mkDerivation rec {
     sha256 = "0j1c6xl5nws8r81847a7jhwjc88aafkq9yby6rczym0mpnyg8i10";
   };
 
-  #nativeBuildInputs = [ pkg-config ctags ];
-  #buildInputs = [ ncurses libressl man ];
-  strictDeps = true;
+  propagatedBuildInputs = with pkgs.python3Packages; [
+    bluepy future requests paramiko pysnmp pycryptodome setuptools
+  ];
+
+  buildPhase = ''
+    true
+  '';
+
+  installPhase = ''
+    chmod 755 rsf.py
+    mkdir -p $out/bin
+    cp -r routersploit rsf.py $out/bin
+  '';
 
   meta = with lib; {
     homepage = "https://git.causal.agency/catgirl/about/";
