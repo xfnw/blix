@@ -1,4 +1,4 @@
-{lib, stdenv, pkgs, fetchFromGitHub}:
+{lib, stdenv, pkgs, fetchFromGitHub }:
 
 stdenv.mkDerivation rec {
   pname = "routersploit";
@@ -12,7 +12,7 @@ stdenv.mkDerivation rec {
   };
 
   propagatedBuildInputs = with pkgs.python3Packages; [
-    bluepy future requests paramiko pysnmp pycryptodome setuptools
+    pkgs.python3 bluepy future requests paramiko pysnmp pycryptodome setuptools
   ];
 
   buildPhase = ''
