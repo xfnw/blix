@@ -89,6 +89,11 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
     # development
     arduino python3Packages.pip ino
 
+    # python3 packages
+    python3 python3Packages.bluepy python3Packages.future
+    python3Packages.requests python3Packages.paramiko python3Packages.pysnmp
+    python3Packages.pycryptodome python3Packages.setuptools
+
     # disclosure
     cherrytree (callPackage ./pkgs/catgirl.nix { })
   ];
