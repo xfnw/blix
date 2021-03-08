@@ -72,7 +72,8 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
     # disk analysis
     testdisk squashfs-tools-ng ddrescue volatility
     stegseek apktool adbfs-rootless ursadb android-udev-rules
-    valgrind dos2unix
+    valgrind dos2unix file exiftool foremost pngcheck steghide
+    docker
 
     # exploit
     doona metasploit twa wifite2 burpsuite wpscan wfuzz
@@ -93,6 +94,7 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
     python3 python3Packages.bluepy python3Packages.future
     python3Packages.requests python3Packages.paramiko python3Packages.pysnmp
     python3Packages.pycryptodome python3Packages.setuptools
+    python3Packages.binwalk
 
     # disclosure
     cherrytree (callPackage ./pkgs/catgirl.nix { })
