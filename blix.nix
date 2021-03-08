@@ -36,9 +36,9 @@ with lib;
 
   documentation.nixos.enable = true;
 
-  services.getty.autologinUser = "u";
+  services.getty.autologinUser = "fops";
 
-  users.users.u = {
+  users.users.fops = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" "video" "libvirt" "docker" ];
     
@@ -50,7 +50,7 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
   services.xserver.enable = true;
   services.xserver.desktopManager.xfce.enable = true;
   services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "u";
+  services.xserver.displayManager.autoLogin.user = "fops";
 
 
 
