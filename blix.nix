@@ -81,7 +81,7 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
     #dsniff 
 
     # crack
-    hashcat mfoc pyrit john
+    hashcat mfoc pyrit john crunch
     cowpatty bully deepsea reaverwps 
 
     # security scan
