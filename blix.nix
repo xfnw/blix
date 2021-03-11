@@ -59,11 +59,13 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
     wget vim tmux gnupg ncdu mosh
     git curl rsync wireguard-tools
     w3m lynx elinks ungoogled-chromium
+    inetutils dnsutils whois
 
     # network analysis
     nmap masscan wireshark termshark netsniff-ng argus bettercap
     stress-ng multimon-ng aircrack-ng mfcuk pixiewps
     hcxtools dirb sslsplit whsniff sniffglue pwnat
+    subfinder zap 
     gnirehtet # reverse android tethering
 
     # research
@@ -81,8 +83,8 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
     #dsniff 
 
     # crack
-    hashcat mfoc pyrit john crunch
-    cowpatty bully deepsea reaverwps 
+    hashcat mfoc pyrit john crunch diceware crowbar
+    cowpatty bully deepsea reaverwps amass
 
     # security scan
     lynis chkrootkit
