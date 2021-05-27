@@ -74,8 +74,8 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
     # disk analysis
     testdisk squashfs-tools-ng ddrescue volatility
     stegseek apktool adbfs-rootless ursadb android-udev-rules
-    valgrind dos2unix file exiftool foremost pngcheck steghide
-    docker
+    valgrind dos2unix file exiftool foremost pngcheck
+    docker xcd
 
     # exploit
     doona metasploit twa wifite2 burpsuite wpscan wfuzz
@@ -99,7 +99,7 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
     python3Packages.binwalk
 
     # disclosure
-    cherrytree (callPackage ./pkgs/catgirl.nix { })
+    catgirl
   ];
 
   environment.variables.GC_INITIAL_HEAP_SIZE = "1M";
