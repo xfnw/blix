@@ -59,7 +59,7 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
     wget vim tmux gnupg ncdu mosh
     git curl rsync wireguard-tools
     w3m lynx elinks ungoogled-chromium
-    inetutils dnsutils whois
+    inetutils dnsutils dnsx whois
 
     # network analysis
     nmap masscan wireshark termshark netsniff-ng argus bettercap
