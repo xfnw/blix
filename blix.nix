@@ -65,7 +65,7 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
     nmap masscan wireshark termshark netsniff-ng argus bettercap
     stress-ng multimon-ng aircrack-ng mfcuk pixiewps
     hcxtools dirb sslsplit whsniff sniffglue pwnat
-    subfinder zap 
+    subfinder zap hping proxychains
     gnirehtet # reverse android tethering
 
     # research
