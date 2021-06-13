@@ -56,6 +56,8 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
 
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
+    (callPackage ./manuals.nix { })
+
     wget vim tmux gnupg ncdu mosh
     git curl rsync wireguard-tools
     w3m lynx elinks ungoogled-chromium
@@ -80,7 +82,7 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
     # exploit
     doona metasploit twa wifite2 burpsuite wpscan wfuzz
     sqlmap thc-hydra (callPackage ./pkgs/routersploit.nix { })
-    #dsniff 
+    dsniff 
 
     # crack
     hashcat mfoc pyrit john crunch diceware crowbar
@@ -99,8 +101,65 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
     python3Packages.binwalk
 
     # disclosure
-    catgirl
+    catgirl tmate
   ];
+
+  environment.etc = {
+    "tmux.conf" = {
+      text = ''
+        set-option -g default-terminal "tmux-256color"
+        set-option -g mouse on
+        set-option -g history-limit 20000
+        set-option -g focus-events on
+        set-option -g xterm-keys on
+        set-option -g set-titles on
+        set-option -g set-titles-string "tmux - #t"
+        set-option -g escape-time 25
+        set-option -g status-left-style             "fg=colour10"
+        set-option -g status-right-style            "fg=colour10"
+        set-option -g status-style                  "bg=default,fg=colour10"
+        set-option -g pane-active-border-style      "bg=default,fg=colour10"
+        set-option -g window-status-activity-style  "bg=default,fg=colour235,bold,reverse"
+        set-option -g window-status-bell-style      "bg=default,fg=white,bold,reverse"
+        set-option -g window-status-current-style   "bg=default,fg=colour10,bold,reverse"
+        set-option -g window-status-style           "bg=default,fg=colour10"
+        set-option -g status on
+        set-option -g status-interval 5
+        set-option -g status-position top
+        set-option -g status-justify left
+        set-option -g window-status-format          " #i #w "
+        set-option -g window-status-separator       ""
+        set-option -g window-status-current-format  " #i #w "
+        set-option -g status-left                   ""
+        set-option -g status-right                  "#h %i:%m %p"
+        set-option -g status-left-length            0
+        set-option -g monitor-activity on
+        set-option -g visual-activity on
+        set-option -g renumber-windows on
+        set-option -g focus-events on
+      '';
+    };
+    "vimrc" = {
+      text = ''
+        set number
+        set relativenumber
+        syntax on
+        color pablo
+        set nocompatible
+        filetype plugin indent on
+        set showcmd
+        set showmatch
+        set ignorecase
+        set smartcase
+        set incsearch
+        set autowrite
+        set hidden
+        set mouse=a
+        set textwidth=60
+        set formatoptions-=t
+      '';
+    };
+  };
 
   environment.variables.GC_INITIAL_HEAP_SIZE = "1M";
   boot.kernel.sysctl."vm.overcommit_memory" = "1";
