@@ -5,3 +5,212 @@
 .Sh NAME
 .Nm blix-applications
 .Nd list of preinstalled blix applications
+.
+.Sh DESCRIPTION
+.Nm
+includes some
+.Ql base
+packages not described in this document, including
+.Bd -literal -offset indent
+wget vim tmux gnupg ncdu mosh
+git curl rsync wireguard-tools
+w3m lynx elinks ungoogled-chromium
+inetutils dnsutils dnsx whois
+.Ed
+.
+.Pp
+the
+.Ql manuals
+psudopackage contains this manual and various
+.Xr blix 7
+documentation.
+.
+.Ss Network Analysis
+.Bl -tag -width Ds
+.It nmap
+portscanning, can check if hosts are up and has various software detection
+.It masscan
+portscan massive subnets quickly
+.It wireshark
+capture packets and inspect them
+.It termshark
+similar to
+.Cm wireshark ,
+however works in a terminal
+.It netsniff-ng
+network analizer toolkit
+.It argus
+audit network packets and look at activity
+.It bettercap
+man in the middle tool
+.It stress-ng
+stress test a computer system
+.It multimon-ng
+digital baseband audio protocol decoder
+.It aircrack-ng
+wireless encryption cracking toolkit
+.It mfcuk
+NFC cracking toolkit
+.It pixiewps
+offline WPS bruteforcer
+.It hcxtools
+capture wlan traffic and convert to
+.Cm hashcat
+and
+.Cm john
+compatable formats
+.It dirb
+web content scanner
+.It sslsplit
+transparent ssl/tls interception
+.It whsniff
+packet sniffer for 802.15.4 wireless networks
+.It sniffglue
+multithreaded packet sniffer
+.It pwnat
+ICMP NAT to NAT client-server communication
+.It subfinder
+find subdomains
+.It zap
+web penetration testing
+.It hping
+craft packets and possibly flood them
+.It proxychains
+chain some proxies
+.It minimodem
+brrr, time for some dialup
+.It gnirehtet
+reverse android tethering
+.El
+.
+.Ss Research
+.Bl -tag -width Ds
+.It theharvester
+gather information from public sources
+.It tor
+anonymize your traffic
+.El
+.
+.Ss Disk Analysis
+.Bl -tag -width Ds
+.It testdisk
+recover deleted innodes, recover data
+.It squashfs-tools-ng
+manipulate a squashfs
+.It ddrescue
+copy data from dying disk
+.It volatility
+memory forsenics framework
+.It stegseek
+seek for stegnografy in images
+.It apktool
+inspect apk files
+.It adbfs-rootless
+mount android phones on linux
+.It ursadb
+database for indexing malware
+.It android-udev-rules
+usb stuff for android
+.It valgrind
+framework for building analysis tools
+.It dos2unix
+convert those pesky line endings
+.It file
+inspect file metadata
+.It exiftool
+look at exif image metadata
+.It foremost
+recover files based on their contents
+.It pngcheck
+check if png is really an image
+.It docker
+run containers and stuff
+.It xcd
+lovely hexdump utility
+.El
+.
+.Ss Exploits
+.Bl -tag -width Ds
+.It doona
+bruteforce exploit detector
+.It metasploit
+big database of known exploits
+.It twa
+tiny web auditor
+.It wifite2
+wireless network auditor
+.It burpsuite
+security testing of web applications
+.It wpscan
+wordpress vulnerability scanner
+.It wfuzz
+web content fuzzer
+.It sqlmap
+automatic sql injection and database takeover
+.It thc-hydra
+fast network login cracker
+.It routersploit
+test for common router vulnerabilities. needs to be run in a
+.Cm nix-shell -p
+.It dsniff
+network auditing and penetration testing
+.El
+.
+.Ss Crackers
+.Bl -tag -width Ds
+.It john
+john the ripper, very nice hash cracker
+.It hashcat
+another hash cracker
+.It mfoc
+mifare classic offline cracker
+.It pyrit
+gpu WPA/WPA2 hash cracker
+.It crunch
+generate wordlists
+.It diceware
+generate passwords using wordlists
+.It crowbar
+bruteforcing tool
+.It cowpatty
+offline dictionary attack against WPA/WPA2
+.It bully
+retreive WPA/WPA2 passphrase from WPS
+.It deepsea
+phishing tool
+.It reaverwps
+bruteforce wifi
+.It amass
+dns enumeration and network mapping
+.It medusa
+speedy login bruteforcer
+.El
+.
+.Ss Security Scan
+.Bl -tag -width Ds
+.It lynis
+scan your computer for vulnerabilities and hardening tips
+.It chkrootkit
+search for rootkits
+.El
+.
+.Ss Development
+.Bl -tag -width Ds
+.It arudino
+arduino ide
+.It python3Packages.pip
+install python packages from pypi
+.It ino
+command line arduino toolkit
+.El
+.
+.Ss Disclosure
+.Bl -tag -width Ds
+.It catgirl
+lovely irc client
+.It tmate
+terminal screen sharing
+.El
+.
+.Sh AUTHORS
+.An xfnw Aq Mt xfnw@riseup.net
