@@ -1,19 +1,17 @@
-{lib, stdenv, pkgs, fetchFromGitHub }:
+{lib, stdenv, pkgs, fetchFromGitHub, python3 }:
 
 stdenv.mkDerivation rec {
-  pname = "routersploit";
-  version = "3fd3946";
+  pname = "cupp";
+  version = "56547fd";
 
   src = fetchFromGitHub {
-    owner = "threat9";
-    repo = "routersploit";
+    owner = "Mebus";
+    repo = "cupp";
     rev = version;
-    sha256 = "0j1c6xl5nws8r81847a7jhwjc88aafkq9yby6rczym0mpnyg8i10";
+    sha256 = "1np468jlabc6xkffbp2hdbmkhc8ln4nhfdqlh7h1c9pv1a4i8h4y";
   };
 
-  buildInputs = with pkgs.python3Packages; [
-    pkgs.python3 bluepy future requests paramiko pysnmp pycryptodome setuptools
-  ];
+  buildInputs = [ python3 ];
   strictDeps = true;
 
   buildPhase = ''
@@ -21,9 +19,9 @@ stdenv.mkDerivation rec {
   '';
 
   installPhase = ''
-    chmod 755 rsf.py
+    chmod 755 cupp.py
     mkdir -p $out/bin
-    cp -r routersploit rsf.py $out/bin
+    cp -r cupp.cfg cupp.py $out/bin
   '';
 
   meta = with lib; {

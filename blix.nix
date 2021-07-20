@@ -87,6 +87,7 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
     # crack
     hashcat mfoc pyrit john crunch diceware crowbar
     cowpatty bully deepsea reaverwps amass medusa
+    (callPackage ./pkgs/cupp.nix { })
 
     # security scan
     lynis chkrootkit
