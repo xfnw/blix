@@ -65,7 +65,7 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
 
     # network analysis
     nmap masscan wireshark termshark netsniff-ng argus bettercap
-    stress-ng multimon-ng aircrack-ng mfcuk pixiewps
+    stress-ng multimon-ng aircrack-ng mfcuk pixiewps nuclei
     hcxtools dirb sslsplit whsniff sniffglue pwnat
     subfinder zap hping proxychains minimodem
     gnirehtet # reverse android tethering
@@ -77,7 +77,7 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
     testdisk squashfs-tools-ng ddrescue volatility
     stegseek apktool adbfs-rootless ursadb android-udev-rules
     valgrind dos2unix file exiftool foremost pngcheck
-    docker xcd
+    docker xcd trufflehog
 
     # exploit
     doona metasploit twa wifite2 burpsuite wpscan wfuzz
