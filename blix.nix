@@ -77,7 +77,7 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
     testdisk squashfs-tools-ng ddrescue volatility
     stegseek apktool adbfs-rootless ursadb android-udev-rules
     valgrind dos2unix file exiftool foremost pngcheck
-    docker xcd trufflehog
+    docker xcd trufflehog sleuthkit
 
     # exploit
     doona metasploit twa wifite2 burpsuite wpscan wfuzz
