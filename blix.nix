@@ -42,8 +42,7 @@ with lib;
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" "video" "libvirt" "docker" ];
     
-    openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1N
-TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
+    openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
   };
   security.sudo.wheelNeedsPassword = false;
 
@@ -66,8 +65,8 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
     # network analysis
     nmap masscan wireshark wireshark-qt termshark netsniff-ng argus
     bettercap stress-ng multimon-ng aircrack-ng mfcuk pixiewps nuclei
-    hcxtools dirb sslsplit whsniff sniffglue pwnat
-    subfinder zap hping proxychains minimodem
+    hcxtools dirb sslsplit whsniff sniffglue pwnat cutecom minicom
+    subfinder zap hping proxychains minimodem cadaver macchanger testssl
     gnirehtet # reverse android tethering
 
     # research
@@ -76,21 +75,21 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
     # disk analysis
     testdisk squashfs-tools-ng ddrescue # volatility
     stegseek apktool adbfs-rootless ursadb android-udev-rules
-    valgrind dos2unix file exiftool foremost pngcheck
-    docker xcd trufflehog sleuthkit
+    valgrind dos2unix file exiftool foremost pngcheck ccrypt
+    docker xcd trufflehog sleuthkit radare2 radare2-cutter
 
     # exploit
     doona metasploit twa wifite2 burpsuite wpscan wfuzz
     sqlmap thc-hydra (callPackage ./pkgs/routersploit.nix { })
-    dsniff 
+    dsniff beef
 
     # crack
     hashcat mfoc john crunch diceware crowbar # pyrit
-    cowpatty bully deepsea reaverwps amass medusa
+    cowpatty bully deepsea reaverwps amass medusa nasty
     (callPackage ./pkgs/cupp.nix { })
 
     # security scan
-    lynis chkrootkit
+    lynis chkrootkit aflplusplus
 
     # development
     arduino python3Packages.pip # ino
