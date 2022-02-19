@@ -64,8 +64,8 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
     inetutils dnsutils dnsx whois
 
     # network analysis
-    nmap masscan wireshark termshark netsniff-ng argus bettercap
-    stress-ng multimon-ng aircrack-ng mfcuk pixiewps nuclei
+    nmap masscan wireshark wireshark-qt termshark netsniff-ng argus
+    bettercap stress-ng multimon-ng aircrack-ng mfcuk pixiewps nuclei
     hcxtools dirb sslsplit whsniff sniffglue pwnat
     subfinder zap hping proxychains minimodem
     gnirehtet # reverse android tethering
@@ -85,7 +85,7 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
     dsniff 
 
     # crack
-    hashcat mfoc pyrit john crunch diceware crowbar
+    hashcat mfoc john crunch diceware crowbar # pyrit
     cowpatty bully deepsea reaverwps amass medusa
     (callPackage ./pkgs/cupp.nix { })
 
@@ -93,13 +93,13 @@ TE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
     lynis chkrootkit
 
     # development
-    arduino python3Packages.pip ino
+    arduino python3Packages.pip # ino
 
     # python3 packages
     python3 python3Packages.bluepy python3Packages.future
     python3Packages.requests python3Packages.paramiko python3Packages.pysnmp
     python3Packages.pycryptodome python3Packages.setuptools
-    python3Packages.binwalk
+    python3Packages.binwalk python3Packages.sqlmap
 
     # disclosure
     catgirl tmate
