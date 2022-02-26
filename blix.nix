@@ -60,7 +60,7 @@ with lib;
     wget vim tmux gnupg ncdu mosh
     git curl rsync wireguard-tools
     w3m lynx elinks ungoogled-chromium
-    inetutils dnsutils dnsx whois
+    inetutils dnsutils dnsx whois jo jq
 
     # network analysis
     nmap masscan wireshark wireshark-qt termshark netsniff-ng argus
@@ -77,7 +77,7 @@ with lib;
     stegseek apktool adbfs-rootless ursadb android-udev-rules
     valgrind dos2unix file exiftool foremost pngcheck ccrypt
     docker xcd trufflehog sleuthkit radare2 radare2-cutter
-    clamav spyre # volatility
+    clamav spyre snowman # volatility
 
     # exploit
     doona metasploit twa wifite2 burpsuite wpscan wfuzz
