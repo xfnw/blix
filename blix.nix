@@ -73,7 +73,7 @@ with lib;
     theharvester tor
 
     # disk analysis
-    testdisk squashfs-tools-ng ddrescue # volatility
+    testdisk squashfs-tools-ng ddrescue yara # volatility
     stegseek apktool adbfs-rootless ursadb android-udev-rules
     valgrind dos2unix file exiftool foremost pngcheck ccrypt
     docker xcd trufflehog sleuthkit radare2 radare2-cutter
