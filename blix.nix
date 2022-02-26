@@ -73,15 +73,16 @@ with lib;
     theharvester tor
 
     # disk analysis
-    testdisk squashfs-tools-ng ddrescue yara yarGen yallback spyre # volatility
+    testdisk squashfs-tools-ng ddrescue yara yarGen yallback
     stegseek apktool adbfs-rootless ursadb android-udev-rules
     valgrind dos2unix file exiftool foremost pngcheck ccrypt
     docker xcd trufflehog sleuthkit radare2 radare2-cutter
+    clamav spyre # volatility
 
     # exploit
     doona metasploit twa wifite2 burpsuite wpscan wfuzz
     sqlmap thc-hydra (callPackage ./pkgs/routersploit.nix { })
-    dsniff beef
+    dsniff beef dnschef
 
     # crack
     hashcat mfoc john crunch diceware crowbar # pyrit
