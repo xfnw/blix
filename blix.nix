@@ -82,7 +82,7 @@ with lib;
     # exploit
     doona metasploit twa wifite2 burpsuite wpscan wfuzz
     sqlmap thc-hydra (callPackage ./pkgs/routersploit.nix { })
-    dsniff beef dnschef
+    dsniff (callPackage ./nur-packages/beef { }) dnschef
 
     # crack
     hashcat mfoc john crunch diceware crowbar # pyrit

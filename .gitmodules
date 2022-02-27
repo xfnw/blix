@@ -1,0 +1,3 @@
+[submodule "nur-packages"]
+	path = nur-packages
+	url = https://github.com/makefu/nur-packages
