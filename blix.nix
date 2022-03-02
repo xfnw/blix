@@ -109,12 +109,11 @@ with lib;
     "tmux.conf" = {
       text = ''
         set-option -g default-terminal "tmux-256color"
-        set-option -g mouse on
         set-option -g history-limit 20000
         set-option -g focus-events on
         set-option -g xterm-keys on
         set-option -g set-titles on
-        set-option -g set-titles-string "tmux - #t"
+        set-option -g set-titles-string "tmux - #T"
         set-option -g escape-time 25
         set-option -g status-left-style             "fg=colour10"
         set-option -g status-right-style            "fg=colour10"
@@ -128,16 +127,22 @@ with lib;
         set-option -g status-interval 5
         set-option -g status-position top
         set-option -g status-justify left
-        set-option -g window-status-format          " #i #w "
+        set-option -g window-status-format          " #I #W "
         set-option -g window-status-separator       ""
-        set-option -g window-status-current-format  " #i #w "
+        set-option -g window-status-current-format  " #I #W "
         set-option -g status-left                   ""
-        set-option -g status-right                  "#h %i:%m %p"
+        set-option -g status-right                  "#h %I:%M %p"
         set-option -g status-left-length            0
         set-option -g monitor-activity on
         set-option -g visual-activity on
         set-option -g renumber-windows on
         set-option -g focus-events on
+        bind N swap-window -t +1 -d
+        bind P swap-window -t -1 -d
+        bind S-Left swap-pane -s '{left-of}'
+        bind S-Right swap-pane -s '{right-of}'
+        bind S-Up swap-pane -s '{up-of}'
+        bind S-Down swap-pane -s '{down-of}'
       '';
     };
     "vimrc" = {
