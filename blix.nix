@@ -66,8 +66,8 @@ with lib;
     nmap masscan wireshark wireshark-qt termshark netsniff-ng argus
     bettercap stress-ng multimon-ng aircrack-ng mfcuk pixiewps nuclei
     hcxtools dirb sslsplit whsniff sniffglue pwnat cutecom minicom
-    subfinder zap hping proxychains minimodem cadaver macchanger testssl
-    gnirehtet whatweb
+    subfinder zap hping proxychains minimodem macchanger testssl
+    gnirehtet whatweb # cadaver
 
     # research
     theharvester tor

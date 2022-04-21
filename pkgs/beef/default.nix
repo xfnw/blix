@@ -35,11 +35,11 @@ EOF
     chmod +x $bin
   '';
 
-  meta = with stdenv.lib; {
-    homepage = https://beefproject.com/;
-    description = "The Browser Exploitation Framework";
-    platforms = platforms.linux;
-    maintainers = with maintainers; [ makefu ];
-  };
+  #meta = with stdenv.lib; {
+  #  homepage = https://beefproject.com/;
+  #  description = "The Browser Exploitation Framework";
+  #  platforms = platforms.linux;
+  #  maintainers = with maintainers; [ makefu ];
+  #};
 
 }
