@@ -85,9 +85,10 @@ with lib;
     dsniff (callPackage ./pkgs/beef { }) dnschef
 
     # crack
-    hashcat mfoc john crunch diceware crowbar # pyrit
+    hashcat mfoc crunch diceware crowbar # pyrit
     cowpatty bully deepsea reaverwps amass medusa nasty
     (callPackage ./pkgs/cupp.nix { })
+    (callPackage <nixpkgs/pkgs/tools/security/john> { stdenv = pkgs.clangStdenv; })
 
     # security scan
     lynis chkrootkit aflplusplus
