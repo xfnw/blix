@@ -67,7 +67,7 @@ with lib;
     bettercap stress-ng multimon-ng aircrack-ng mfcuk pixiewps nuclei
     hcxtools dirb sslsplit whsniff sniffglue pwnat cutecom minicom
     subfinder zap hping proxychains minimodem macchanger testssl
-    gnirehtet whatweb # cadaver
+    gnirehtet whatweb feroxbuster # cadaver
 
     # research
     theharvester tor
