@@ -78,6 +78,7 @@ with lib;
     valgrind dos2unix file exiftool foremost pngcheck ccrypt
     docker xcd trufflehog sleuthkit radare2 radare2-cutter
     clamav spyre snowman jadx ghidra # volatility
+    msitools cabextract p7zip unrar unzip
 
     # exploit
     doona metasploit twa wifite2 burpsuite wpscan wfuzz
