@@ -66,7 +66,7 @@ with lib;
     nmap masscan wireshark wireshark-qt termshark netsniff-ng argus
     bettercap stress-ng multimon-ng aircrack-ng mfcuk pixiewps nuclei
     hcxtools dirb sslsplit whsniff sniffglue pwnat cutecom minicom
-    subfinder hping proxychains minimodem macchanger testssl # zap
+    subfinder hping proxychains minimodem macchanger testssl
     gnirehtet whatweb feroxbuster rehex cadaver
 
     # research
@@ -81,7 +81,7 @@ with lib;
     msitools cabextract p7zip unrar unzip
 
     # exploit
-    doona metasploit twa wifite2 burpsuite wpscan wfuzz
+    doona metasploit twa wifite2 zap wpscan wfuzz
     sqlmap thc-hydra (callPackage ./pkgs/routersploit.nix { })
     dsniff (callPackage ./pkgs/beef { }) dnschef
 
