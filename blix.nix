@@ -57,10 +57,10 @@ with lib;
   environment.systemPackages = with pkgs; [
     (callPackage ./manuals.nix { })
 
-    wget vim tmux gnupg ncdu mosh
-    git curl rsync wireguard-tools
+    wget vim tmux gnupg ncdu mosh jq
+    git curl rsync wireguard-tools pup
     w3m lynx elinks ungoogled-chromium
-    inetutils dnsutils dnsx whois jo jq
+    inetutils dnsutils dnsx whois jo
 
     # network analysis
     nmap masscan wireshark wireshark-qt termshark netsniff-ng argus
