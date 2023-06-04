@@ -76,7 +76,7 @@ with lib;
     testdisk squashfs-tools-ng ddrescue yara yarGen yallback
     stegseek apktool adbfs-rootless ursadb android-udev-rules
     valgrind dos2unix file exiftool foremost pngcheck ccrypt
-    docker xcd trufflehog sleuthkit radare2 radare2-cutter
+    docker xcd trufflehog sleuthkit radare2 cutter
     clamav spyre snowman jadx ghidra # volatility
     msitools cabextract p7zip unrar unzip
 
