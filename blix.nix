@@ -70,7 +70,7 @@ with lib;
     gnirehtet whatweb feroxbuster rehex cadaver
 
     # research
-    theharvester tor
+    theharvester tor scanmem
 
     # disk analysis
     testdisk squashfs-tools-ng ddrescue yara yarGen yallback
