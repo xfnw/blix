@@ -14,7 +14,7 @@ with lib;
   ];
   
   # ISO naming.
-  isoImage.isoName = "blix-${config.system.nixos.label}-${pkgs.stdenv.system}.iso";
+  image.fileName = "blix-${config.system.nixos.label}-${pkgs.stdenv.system}.iso";
 
   isoImage.volumeID = substring 0 11 "BLIX_ISO";
 
