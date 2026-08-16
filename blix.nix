@@ -41,8 +41,6 @@ with lib;
   users.users.fops = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" "video" "libvirt" "docker" ];
-    
-    openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDBUk5IjB3+trnVO6pncivFbOetUL8BPTl3CwAtk4532 xfnw@raven" ];
   };
   security.sudo.wheelNeedsPassword = false;
 
