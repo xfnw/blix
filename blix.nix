@@ -80,13 +80,11 @@ with lib;
 
     # exploit
     doona metasploit twa wifite2 zap wpscan wfuzz
-    sqlmap thc-hydra (callPackage ./pkgs/routersploit.nix { })
-    dsniff (callPackage ./pkgs/beef { }) dnschef
+    sqlmap thc-hydra dsniff dnschef
 
     # crack
     hashcat mfoc crunch diceware crowbar # pyrit deepsea
     cowpatty bully reaverwps amass medusa nasty john
-    (callPackage ./pkgs/cupp.nix { })
 
     # security scan
     lynis aflplusplus
