@@ -61,7 +61,7 @@ with lib;
     inetutils dnsutils dnsx whois jo
 
     # network analysis
-    nmap masscan wireshark wireshark-qt termshark netsniff-ng argus
+    nmap masscan wireshark termshark netsniff-ng argus
     bettercap stress-ng multimon-ng aircrack-ng mfcuk pixiewps nuclei
     hcxtools dirb sslsplit whsniff sniffglue pwnat cutecom minicom
     subfinder hping proxychains minimodem macchanger testssl
@@ -71,7 +71,7 @@ with lib;
     theharvester tor scanmem
 
     # disk analysis
-    testdisk squashfs-tools-ng ddrescue yara yarGen yallback
+    testdisk squashfs-tools-ng ddrescue yara yargen yallback
     apktool adbfs-rootless ursadb binwalk
     valgrind dos2unix file exiftool foremost pngcheck ccrypt
     docker xcd trufflehog sleuthkit radare2 cutter
