@@ -72,10 +72,10 @@ with lib;
 
     # disk analysis
     testdisk squashfs-tools-ng ddrescue yara yarGen yallback
-    stegseek apktool adbfs-rootless ursadb android-udev-rules
+    apktool adbfs-rootless ursadb
     valgrind dos2unix file exiftool foremost pngcheck ccrypt
     docker xcd trufflehog sleuthkit radare2 cutter
-    clamav spyre snowman jadx ghidra # volatility
+    clamav spyre jadx ghidra # volatility
     msitools cabextract p7zip unrar unzip
 
     # exploit
@@ -89,16 +89,16 @@ with lib;
     (callPackage ./pkgs/cupp.nix { })
 
     # security scan
-    lynis chkrootkit aflplusplus
+    lynis aflplusplus
 
     # development
     arduino python3Packages.pip # ino
 
     # python3 packages
-    python3 python3Packages.bluepy python3Packages.future
+    python3 python3Packages.bluepy
     python3Packages.requests python3Packages.paramiko python3Packages.pysnmp
     python3Packages.pycryptodome python3Packages.setuptools
-    python3Packages.binwalk python3Packages.sqlmap
+    python3Packages.sqlmap
 
     # disclosure
     catgirl tmate
