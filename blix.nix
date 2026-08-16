@@ -79,7 +79,7 @@ with lib;
     msitools cabextract p7zip unrar unzip
 
     # exploit
-    doona metasploit twa wifite2 zap wpscan wfuzz
+    doona metasploit twa wifite2 zap wpscan
     sqlmap thc-hydra dsniff dnschef
 
     # crack
