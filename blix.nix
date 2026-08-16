@@ -46,8 +46,8 @@ with lib;
 
   services.xserver.enable = true;
   services.xserver.desktopManager.xfce.enable = true;
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "fops";
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "fops";
 
 
 
