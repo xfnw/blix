@@ -72,7 +72,7 @@ with lib;
 
     # disk analysis
     testdisk squashfs-tools-ng ddrescue yara yarGen yallback
-    apktool adbfs-rootless ursadb
+    apktool adbfs-rootless ursadb binwalk
     valgrind dos2unix file exiftool foremost pngcheck ccrypt
     docker xcd trufflehog sleuthkit radare2 cutter
     clamav spyre jadx ghidra # volatility
